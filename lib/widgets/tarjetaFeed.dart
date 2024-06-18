@@ -34,7 +34,7 @@ class tarjetaFeed extends StatelessWidget {
             
             SizedBox(height: 10), // Espacio entre el nombre y el texto
           
-            descripcion(des:tarjeta["descricion"]!,),
+            descripcion(des:tarjeta["descripcion"]!,),
             
             SizedBox(height: 10),
           
