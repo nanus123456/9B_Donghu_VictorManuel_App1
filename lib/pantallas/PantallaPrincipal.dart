@@ -6,6 +6,8 @@ import 'package:hola_mundo/pantallas/lista.dart';
 import 'package:hola_mundo/pantallas/tyc.dart';
 import 'package:hola_mundo/widgets/tarjetaFeed.dart';
 import 'package:hola_mundo/pantallas/tyc.dart';
+import 'package:hola_mundo/pantallas/formulario.dart';
+
 
 class PantallaPrincipal extends StatefulWidget {
   const PantallaPrincipal({
@@ -38,16 +40,31 @@ class _PantallaPrincipalState extends State<PantallaPrincipal> {
       ),
 
        body: Column(
-         children: [
+        
+         children:  [
           Expanded(child: _paginas[_paginaActual]),
-           ElevatedButton(onPressed: (){
+          Row(
+            children: [
+              ElevatedButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context) => tyc()));
 
            },child: const Text("Terminos y Condiciones"),
            ),
+
+           ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => formulario()));
+
+           },child: const Text("Formulario"),
+           ),
+            ],
+          )
+           
          ],
 
+         
+
        ),
+
        //listaFeed(), 
 
 
